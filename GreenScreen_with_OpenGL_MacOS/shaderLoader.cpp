@@ -1,0 +1,108 @@
+//
+//  shaderLoader.cpp
+//  GreenScreen_with_OpenGL_MacOS
+//
+//  Created by 宋子奇 on 2025/9/6.
+//
+
+#include "shaderLoader.hpp"
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <stdarg.h>
+
+#include <fcntl.h>
+#include <unistd.h>
+#include <sys/stat.h>
+
+#include <memory>
+#include <GL/gl3w.h>
+
+using namespace std;
+
+
+GLuint shaw::ShaderLoader::loadFromFile(const char* file_path, const GLenum shader_type)
+{
+    GLuint shader = 0;
+    shader = glCreateShader(shader_type);
+    assert(shader > 0);
+    
+    int file = open(file_path, O_RDONLY);
+    assert(file > 0);
+    
+    struct stat file_stat = {0};
+    int statret = fstat(file, &file_stat);
+    assert(statret == 0);
+    
+    shared_ptr<char> file_buf = shared_ptr<char>((char*)calloc(1, file_stat.st_size + 1), free); // last for '\0'
+    assert(file_buf);
+    
+    ssize_t bytes_read = read(file, file_buf.get(), file_stat.st_size);
+    assert(bytes_read == file_stat.st_size);
+    
+    char* sources[] = {file_buf.get()};
+    glShaderSource(shader, 1, sources, NULL);
+    glCompileShader(shader);
+    
+    GLint result;
+    glGetShaderiv(shader, GL_COMPILE_STATUS, &result);
+    if(GL_FALSE == result)
+    {
+        fprintf(stderr, "Shader compilation failed!\n");
+        GLint logLen;
+        glGetShaderiv(shader, GL_INFO_LOG_LENGTH, &logLen);
+        if(logLen > 0)
+        {
+            char *log = (char*)malloc(logLen);
+            GLsizei written;
+            glGetShaderInfoLog(shader, logLen, &written, log);
+            fprintf(stderr, "shader log:    %s\n", log);
+            free(log);
+        }
+    }
+    return (shader);
+}
+
+
+GLuint shaw::ShaderLoader::linkShaders(GLuint shader, ...)
+{
+    GLuint program = 0;
+    program = glCreateProgram();
+    assert(program != 0);
+    
+    glAttachShader(program, shader);
+    
+    va_list shaderp;
+    va_start(shaderp, shader);
+    
+    while(1) {
+        shader = va_arg(shaderp, GLuint);
+        if(shader == 0) {
+            break;
+        }
+        glAttachShader(program, shader);
+    }
+    
+    va_end(shaderp);
+    
+    glLinkProgram(program);
+    
+    GLint result;
+    glGetProgramiv(program, GL_LINK_STATUS, &result);
+    if(GL_FALSE == result)
+    {
+        fprintf(stderr, "Program link failed!\n");
+        GLint logLen;
+        glGetProgramiv(program, GL_INFO_LOG_LENGTH, &logLen);
+        if(logLen > 0)
+        {
+            char *log = (char*)malloc(logLen);
+            GLsizei written;
+            glGetProgramInfoLog(program, logLen, &written, log);
+            fprintf(stderr, "program log:    %s\n", log);
+            free(log);
+        }
+    }
+    return (program);
+}

@@ -1,0 +1,23 @@
+# Xcode project user settings
+*.xcuserdata/
+*.xcuserstate
+*.xccheckout
+*.moved-aside
+
+# Build products
+build/
+DerivedData/
+
+# Temporary files
+*.swp
+*.lock
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+
+# macOS system files
+.DS_Store
+
+# Custom files
+TestVideos/*
+

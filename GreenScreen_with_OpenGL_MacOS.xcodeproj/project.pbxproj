@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		21865F062E6AF7F3007B2BE8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21865F052E6AF7F3007B2BE8 /* main.cpp */; };
+		21865F112E6AFA73007B2BE8 /* libopencv_highgui.4.9.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 21865F0E2E6AFA73007B2BE8 /* libopencv_highgui.4.9.0.dylib */; };
+		21865F122E6AFA73007B2BE8 /* libopencv_imgproc.4.9.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 21865F0F2E6AFA73007B2BE8 /* libopencv_imgproc.4.9.0.dylib */; };
+		21865F132E6AFA73007B2BE8 /* libopencv_core.4.9.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 21865F102E6AFA73007B2BE8 /* libopencv_core.4.9.0.dylib */; };
+		21865F152E6AFAEF007B2BE8 /* libopencv_imgcodecs.4.9.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 21865F142E6AFAEF007B2BE8 /* libopencv_imgcodecs.4.9.0.dylib */; };
+		21865F1A2E6B066C007B2BE8 /* autoSimilarity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21865F192E6B066C007B2BE8 /* autoSimilarity.cpp */; };
+		21865F1D2E6BBC10007B2BE8 /* similarity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21865F1B2E6BBC10007B2BE8 /* similarity.cpp */; };
+		21865F202E6BBE86007B2BE8 /* shaderLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21865F1E2E6BBE86007B2BE8 /* shaderLoader.cpp */; };
+		21865F222E6BD3D0007B2BE8 /* libgl3w.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 21865F212E6BD3D0007B2BE8 /* libgl3w.dylib */; };
+		21B85F672E6CF46A00520057 /* libopencv_videoio.4.9.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 21B85F662E6CF46A00520057 /* libopencv_videoio.4.9.0.dylib */; };
+		21B85F692E6CF62200520057 /* libsb7.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 21B85F682E6CF62200520057 /* libsb7.dylib */; };
+		21B85F6B2E6CFBDB00520057 /* libglfw.3.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 21B85F6A2E6CFBDB00520057 /* libglfw.3.4.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +36,25 @@
 /* Begin PBXFileReference section */
 		21865F022E6AF7F3007B2BE8 /* GreenScreen_with_OpenGL_MacOS */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GreenScreen_with_OpenGL_MacOS; sourceTree = BUILT_PRODUCTS_DIR; };
 		21865F052E6AF7F3007B2BE8 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		21865F0C2E6AF836007B2BE8 /* GreenScreen_with_OpenGL_MacOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GreenScreen_with_OpenGL_MacOS.entitlements; sourceTree = "<group>"; };
+		21865F0E2E6AFA73007B2BE8 /* libopencv_highgui.4.9.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_highgui.4.9.0.dylib; path = ../../../../../usr/local/Cellar/opencv/4.9.0_9/lib/libopencv_highgui.4.9.0.dylib; sourceTree = "<group>"; };
+		21865F0F2E6AFA73007B2BE8 /* libopencv_imgproc.4.9.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_imgproc.4.9.0.dylib; path = ../../../../../usr/local/Cellar/opencv/4.9.0_9/lib/libopencv_imgproc.4.9.0.dylib; sourceTree = "<group>"; };
+		21865F102E6AFA73007B2BE8 /* libopencv_core.4.9.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_core.4.9.0.dylib; path = ../../../../../usr/local/Cellar/opencv/4.9.0_9/lib/libopencv_core.4.9.0.dylib; sourceTree = "<group>"; };
+		21865F142E6AFAEF007B2BE8 /* libopencv_imgcodecs.4.9.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_imgcodecs.4.9.0.dylib; path = ../../../../../usr/local/Cellar/opencv/4.9.0_9/lib/libopencv_imgcodecs.4.9.0.dylib; sourceTree = "<group>"; };
+		21865F162E6B0401007B2BE8 /* GreenScreen_Common.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GreenScreen_Common.hpp; sourceTree = "<group>"; };
+		21865F182E6B0559007B2BE8 /* autoSimilarity.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = autoSimilarity.hpp; sourceTree = "<group>"; };
+		21865F192E6B066C007B2BE8 /* autoSimilarity.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = autoSimilarity.cpp; sourceTree = "<group>"; };
+		21865F1B2E6BBC10007B2BE8 /* similarity.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = similarity.cpp; sourceTree = "<group>"; };
+		21865F1C2E6BBC10007B2BE8 /* similarity.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = similarity.hpp; sourceTree = "<group>"; };
+		21865F1E2E6BBE86007B2BE8 /* shaderLoader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = shaderLoader.cpp; sourceTree = "<group>"; };
+		21865F1F2E6BBE86007B2BE8 /* shaderLoader.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = shaderLoader.hpp; sourceTree = "<group>"; };
+		21865F212E6BD3D0007B2BE8 /* libgl3w.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgl3w.dylib; path = ../../../../../usr/local/lib/libgl3w.dylib; sourceTree = "<group>"; };
+		21865F242E6BE6C0007B2BE8 /* FragmentShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FragmentShader.glsl; sourceTree = "<group>"; };
+		21865F252E6BE6C0007B2BE8 /* VertexShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VertexShader.glsl; sourceTree = "<group>"; };
+		21B85F652E6CEEDF00520057 /* FragmentShader_Shadow */ = {isa = PBXFileReference; lastKnownFileType = text; path = FragmentShader_Shadow; sourceTree = "<group>"; };
+		21B85F662E6CF46A00520057 /* libopencv_videoio.4.9.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_videoio.4.9.0.dylib; path = ../../../../../usr/local/Cellar/opencv/4.9.0_9/lib/libopencv_videoio.4.9.0.dylib; sourceTree = "<group>"; };
+		21B85F682E6CF62200520057 /* libsb7.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsb7.dylib; path = ../../../../../usr/local/lib/libsb7.dylib; sourceTree = "<group>"; };
+		21B85F6A2E6CFBDB00520057 /* libglfw.3.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.4.dylib; path = ../../../../../usr/local/Cellar/glfw/3.4/lib/libglfw.3.4.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +62,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21B85F6B2E6CFBDB00520057 /* libglfw.3.4.dylib in Frameworks */,
+				21B85F692E6CF62200520057 /* libsb7.dylib in Frameworks */,
+				21B85F672E6CF46A00520057 /* libopencv_videoio.4.9.0.dylib in Frameworks */,
+				21865F222E6BD3D0007B2BE8 /* libgl3w.dylib in Frameworks */,
+				21865F152E6AFAEF007B2BE8 /* libopencv_imgcodecs.4.9.0.dylib in Frameworks */,
+				21865F112E6AFA73007B2BE8 /* libopencv_highgui.4.9.0.dylib in Frameworks */,
+				21865F122E6AFA73007B2BE8 /* libopencv_imgproc.4.9.0.dylib in Frameworks */,
+				21865F132E6AFA73007B2BE8 /* libopencv_core.4.9.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +81,7 @@
 			children = (
 				21865F042E6AF7F3007B2BE8 /* GreenScreen_with_OpenGL_MacOS */,
 				21865F032E6AF7F3007B2BE8 /* Products */,
+				21865F0D2E6AFA73007B2BE8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +96,35 @@
 		21865F042E6AF7F3007B2BE8 /* GreenScreen_with_OpenGL_MacOS */ = {
 			isa = PBXGroup;
 			children = (
+				21865F242E6BE6C0007B2BE8 /* FragmentShader.glsl */,
+				21865F252E6BE6C0007B2BE8 /* VertexShader.glsl */,
+				21865F192E6B066C007B2BE8 /* autoSimilarity.cpp */,
+				21865F182E6B0559007B2BE8 /* autoSimilarity.hpp */,
+				21865F162E6B0401007B2BE8 /* GreenScreen_Common.hpp */,
+				21865F0C2E6AF836007B2BE8 /* GreenScreen_with_OpenGL_MacOS.entitlements */,
 				21865F052E6AF7F3007B2BE8 /* main.cpp */,
+				21865F1B2E6BBC10007B2BE8 /* similarity.cpp */,
+				21865F1C2E6BBC10007B2BE8 /* similarity.hpp */,
+				21865F1E2E6BBE86007B2BE8 /* shaderLoader.cpp */,
+				21865F1F2E6BBE86007B2BE8 /* shaderLoader.hpp */,
+				21B85F652E6CEEDF00520057 /* FragmentShader_Shadow */,
 			);
 			path = GreenScreen_with_OpenGL_MacOS;
+			sourceTree = "<group>";
+		};
+		21865F0D2E6AFA73007B2BE8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				21B85F6A2E6CFBDB00520057 /* libglfw.3.4.dylib */,
+				21B85F682E6CF62200520057 /* libsb7.dylib */,
+				21B85F662E6CF46A00520057 /* libopencv_videoio.4.9.0.dylib */,
+				21865F212E6BD3D0007B2BE8 /* libgl3w.dylib */,
+				21865F142E6AFAEF007B2BE8 /* libopencv_imgcodecs.4.9.0.dylib */,
+				21865F102E6AFA73007B2BE8 /* libopencv_core.4.9.0.dylib */,
+				21865F0E2E6AFA73007B2BE8 /* libopencv_highgui.4.9.0.dylib */,
+				21865F0F2E6AFA73007B2BE8 /* libopencv_imgproc.4.9.0.dylib */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +185,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				21865F062E6AF7F3007B2BE8 /* main.cpp in Sources */,
+				21865F1D2E6BBC10007B2BE8 /* similarity.cpp in Sources */,
+				21865F1A2E6B066C007B2BE8 /* autoSimilarity.cpp in Sources */,
+				21865F202E6BBE86007B2BE8 /* shaderLoader.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,9 +306,20 @@
 		21865F0A2E6AF7F3007B2BE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = GreenScreen_with_OpenGL_MacOS/GreenScreen_with_OpenGL_MacOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3YTKSRF92C;
 				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/Cellar/opencv/4.9.0_9/include/opencv4/,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/Cellar/opencv/4.9.0_9/lib/,
+					/usr/local/lib,
+					/usr/local/Cellar/opencv/4.9.0_9/lib,
+					/usr/local/Cellar/glfw/3.4/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -248,9 +327,20 @@
 		21865F0B2E6AF7F3007B2BE8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = GreenScreen_with_OpenGL_MacOS/GreenScreen_with_OpenGL_MacOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3YTKSRF92C;
 				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/Cellar/opencv/4.9.0_9/include/opencv4/,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/Cellar/opencv/4.9.0_9/lib/,
+					/usr/local/lib,
+					/usr/local/Cellar/opencv/4.9.0_9/lib,
+					/usr/local/Cellar/glfw/3.4/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
